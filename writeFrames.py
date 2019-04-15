@@ -5,18 +5,33 @@ import glob
 
 
 cap = cv2.VideoCapture("night-day.mp4")
-
+input_frames = int(cap.get(7))
+print (input_frames)
 count = 0
 
-path = 'night-day/'
+path = 'train/'
+i = 0
+path = path  + str(i)
+os.mkdir(path)
 
 while(cap.isOpened()):
     ret, frame = cap.read()
 
     if ret==True:
 
+        if count == 90:
+            i += 1
+            path = 'train/' + str(i)
+            os.mkdir(path)
+            count = 0
+
+        if count == 80:
+            path = 'val/' + str(i)
+            os.mkdir(path)
+        
+            
         # write all frames to /images folder
-        cv2.imwrite(path + 'frame%d.jpg'%count, frame)
+        cv2.imwrite(path + '/%d.jpg'%count, frame)
         count += 1
 
         # cv2.imshow('frame',frame)
