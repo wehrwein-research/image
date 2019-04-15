@@ -9,6 +9,10 @@ input_frames = int(cap.get(7))
 print (input_frames)
 count = 0
 
+os.mkdir('train/')
+os.mkdir('val/')
+os.mkdir('test/')
+
 path = 'train/'
 i = 0
 path = path  + str(i)
@@ -19,14 +23,18 @@ while(cap.isOpened()):
 
     if ret==True:
 
-        if count == 90:
+        if count == 96:
             i += 1
             path = 'train/' + str(i)
             os.mkdir(path)
             count = 0
 
-        if count == 80:
+        if count == 76:
             path = 'val/' + str(i)
+            os.mkdir(path)
+
+        if count == 57:
+            path = 'test/' + str(i)
             os.mkdir(path)
         
             
@@ -39,6 +47,7 @@ while(cap.isOpened()):
             break
     else:
         break
+
 
 # Release everything if job is finished
 cap.release()
