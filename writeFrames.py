@@ -22,13 +22,13 @@ while(cap.isOpened()):
 
     if ret==True:
 
-        if count == 96:
+        if count == 90:
             i += 1
             path = 'train/' + str(i)
             os.mkdir(path)
             count = 0
 
-        if count == 76:
+        if count == 70:
             path = 'val/' + str(i)
             os.mkdir(path)
 
