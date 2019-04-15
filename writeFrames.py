@@ -11,7 +11,6 @@ count = 0
 
 os.mkdir('train/')
 os.mkdir('val/')
-os.mkdir('test/')
 
 path = 'train/'
 i = 0
@@ -33,9 +32,6 @@ while(cap.isOpened()):
             path = 'val/' + str(i)
             os.mkdir(path)
 
-        if count == 57:
-            path = 'test/' + str(i)
-            os.mkdir(path)
         
             
         # write all frames to /images folder
