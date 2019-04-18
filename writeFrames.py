@@ -9,6 +9,9 @@ input_frames = int(cap.get(7))
 print (input_frames)
 count = 0
 
+os.mkdir('train/')
+os.mkdir('val/')
+
 path = 'train/'
 i = 0
 path = path  + str(i)
@@ -25,9 +28,10 @@ while(cap.isOpened()):
             os.mkdir(path)
             count = 0
 
-        if count == 80:
+        if count == 70:
             path = 'val/' + str(i)
             os.mkdir(path)
+
         
             
         # write all frames to /images folder
@@ -39,6 +43,7 @@ while(cap.isOpened()):
             break
     else:
         break
+
 
 # Release everything if job is finished
 cap.release()
