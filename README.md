@@ -2,6 +2,12 @@
 
 https://colab.research.google.com/drive/1mxFkGFY244xS4eVAmTJkhoVwJDB9wsOs
 
+## Pair image Classifieri
+https://colab.research.google.com/drive/1SCka5Ms4chV7e84XnsnaAWGl9Pg3Z9aR
+
+image folder
+https://drive.google.com/drive/folders/1ov3txPRWPaHPCf0cqVoR1ZgBILL4K9Al?usp=sharing
+
 ## Regression
 https://colab.research.google.com/drive/1cThmbTf-p6JJFxK_esWb7TebLunm9OG2
 
